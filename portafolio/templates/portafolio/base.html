@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio académico de Yakin José Esquit Toledo, estudiante de Ingeniería en Informática en la UVG. Proyectos, aprendizajes y habilidades en desarrollo.">
+  <title>{{ titulo }} · Yakin Esquit</title>
+  <link rel="stylesheet" href="{% static 'portafolio/css/fuentes.css' %}">
+  <link rel="icon" href="{% static 'portafolio/img/marca.svg' %}" type="image/svg+xml">
+  <link rel="stylesheet" href="{% static 'portafolio/css/estilos.css' %}">
+  <script src="{% static 'portafolio/js/main.js' %}" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+ <nav class="container navbar" aria-label="Navegación principal">
+  <a class="brand" href="{% url 'portafolio:inicio' %}" aria-label="Mi portafolio, inicio"><span class="brand-icon">m<span>p</span></span><span>mi portafolio<span class="brand-dot">.</span></span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" hidden>Menú <span aria-hidden="true">☰</span></button>
+  <div class="nav-links" id="nav-links">
+   <a href="{% url 'portafolio:inicio' %}" {% if titulo == 'Inicio' %}aria-current="page"{% endif %}>Inicio</a>
+   <a href="{% url 'portafolio:sobre_mi' %}" {% if titulo == 'Sobre mí' %}aria-current="page"{% endif %}>Sobre mí</a>
+   <a href="{% url 'portafolio:habilidades' %}" {% if titulo == 'Habilidades' %}aria-current="page"{% endif %}>Habilidades</a>
+   <a href="{% url 'portafolio:proyectos' %}" {% if titulo == 'Proyectos' %}aria-current="page"{% endif %}>Proyectos</a>
+   <a class="nav-contact" href="{% url 'portafolio:contacto' %}" {% if titulo == 'Contacto' %}aria-current="page"{% endif %}>Contacto <span aria-hidden="true">↗</span></a>
+  </div>
+ </nav>
+</header>
+<main id="contenido" tabindex="-1">{% block contenido %}{% endblock %}</main>
+<footer class="site-footer"><div class="container footer-top"><a class="brand" href="{% url 'portafolio:inicio' %}">mi portafolio.</a><p>Aprender. Crear. Compartir.</p><a href="{% url 'portafolio:contacto' %}">Conversemos ↗</a></div><div class="container footer-bottom"><span>Yakin José Esquit Toledo · Ingeniería en Informática · UVG</span><a href="{% url 'portafolio:error_404' %}">Explorar página 404</a><span>Hecho con curiosidad y código.</span></div></footer>
+</body></html>
