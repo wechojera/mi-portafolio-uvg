@@ -53,6 +53,8 @@ Visitar `/ruta-inexistente/`. Debe mostrar el diseño personalizado y devolver 4
 - `verificar.py`: comprobación sin base de datos de rutas, plantillas, estáticos, enlaces y restricciones.
 - `entrega/index.html`: índice local con mapa e inventario, doce wireframes SVG, 24 capturas reales, doce comparativas y guion de exposición de cinco minutos.
 
+En GitHub, los materiales de entrega se distribuyen en **`material-entrega.zip`** para conservar juntas las capturas y sus páginas HTML. Extraer ese ZIP en la raíz del repositorio: aparecerá la carpeta `entrega/`. Abrir `entrega/index.html` con doble clic. El ZIP completo del proyecto entregado en chat ya contiene esa carpeta extraída.
+
 Los wireframes de referencia se prepararon con el proyecto ya existente. Las capturas comparan una vista de 900 px de alto, a 1440 y 390 px de ancho. Figma y Django comparten la identidad visual, con diferencias documentadas de composición y texto. Se comprobó la navegación del prototipo desde Inicio hacia Proyectos en escritorio y hacia Contacto en móvil.
 
 El calendario recibido abarca seis semanas y exige revisiones antes de avanzar de fase. El historial que se registre desde esta preparación usa fechas reales; no acredita varias semanas anteriores de trabajo ni revisiones docentes aún no confirmadas.
