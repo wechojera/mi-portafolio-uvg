@@ -4,6 +4,7 @@ __pycache__/
 .env
 .DS_Store
 staticfiles/
+_site/
 work/
 outputs/
 *.sqlite3

@@ -2,9 +2,23 @@
 
 Portafolio académico de cinco páginas y un error 404 personalizado, desarrollado con Django, HTML, CSS y JavaScript puro. Incluye contenido académico de ejemplo marcado como pendiente. No atribuye experiencia profesional al estudiante.
 
-Autor: **Yakin José Esquit Toledo**, Ingeniería en Informática, UVG. [Perfil GitHub](https://github.com/wechojera) · [Repositorio privado del curso](https://github.com/wechojera/mi-portafolio-uvg) · Correo: yakintoledo@gmail.com.
+## Versión pública en internet
 
-El acceso del docente al repositorio privado debe compartirse desde la cuenta del estudiante.
+La publicación se genera desde las vistas y plantillas Django mediante `publicar.py` y GitHub Actions. GitHub Pages sirve el HTML resultante y los archivos estáticos; el navegador ejecuta el menú, los filtros y la validación. No es un servidor Django en producción. El proyecto Django para ejecutar y evaluar se conserva completo en este repositorio.
+
+El workflow `.github/workflows/pages.yml` verifica el proyecto, genera únicamente las seis páginas del portafolio y publica los recursos locales. No publica el guion, los materiales de entrega ni el código Python como páginas del sitio. Cada cambio en `main` vuelve a generar la web.
+
+Para preparar una copia equivalente localmente:
+
+```powershell
+python publicar.py --base-path /mi-portafolio-uvg
+```
+
+El resultado está en `_site/`. La ruta base se aplica tanto a los enlaces internos como a los recursos. `404.html` es la página de error de GitHub Pages; la ruta visible `/404/` muestra el mismo diseño como documento estático. En Django conserva su respuesta HTTP 404.
+
+Autor: **Yakin José Esquit Toledo**, Ingeniería en Informática, UVG. [Perfil GitHub](https://github.com/wechojera) · [Repositorio del curso](https://github.com/wechojera/mi-portafolio-uvg) · Correo: yakintoledo@gmail.com.
+
+El repositorio es público por decisión del estudiante.
 
 ## Requisitos e instalación
 
@@ -90,7 +104,7 @@ Para revisión manual: probar a 1440 y 390 px; abrir/cerrar menú, navegar con T
 
 ## Trabajar con el repositorio de GitHub
 
-El repositorio privado se creó en la cuenta del estudiante. Para obtener una copia con el historial, desde una carpeta distinta a este proyecto:
+El repositorio se encuentra en la cuenta del estudiante y es público. Para obtener una copia con el historial, desde una carpeta distinta a este proyecto:
 
 ```powershell
 git clone https://github.com/wechojera/mi-portafolio-uvg.git
